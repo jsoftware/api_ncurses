@@ -2,11 +2,6 @@ cocurrent 'base'
 coinsert 'ncurses'
 
 test=: 3 : 0
-if. IFJ6 do.
-  if. -.IFCONSOLE do. 0 [ smoutput 'console only' return. end.
-else.
-  if. IFGTK+.IFJHS do. 0 [ smoutput 'console only' return. end.
-end.
 if. UNAME-:'Linux' do.
   'libc.so.6 setlocale > x i *c'&cd 6;''
   'libc.so.6 setlocale > x i *c'&cd 1;,'C'
