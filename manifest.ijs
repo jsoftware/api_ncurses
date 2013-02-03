@@ -10,9 +10,9 @@ linux: (debian) sudo aptitude install libncurses5 (or libncursesw5 for unicode)
 win32: download pre-compiled binary from http://pdcurses.sourceforge.net/
 )
 
-VERSION=: '1.0.0'
+VERSION=: '1.0.1'
 
-RELEASE=: 'j602 j701'
+RELEASE=: 'j602 j701 j801'
 
 FILES=: 0 : 0
 ncurses.ijs
