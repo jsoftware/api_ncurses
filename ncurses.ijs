@@ -2,17 +2,17 @@ cocurrent 'ncurses'
 
 NB. IFNUX ncurses or ncursesw
 NB. IFWIN pdcurses compilation options WIDE=Y UTF8=N
-NCURSES_WIDE=: IFWIN
-NCURSES_UTF8=: IFUNIX
+NCURSES_WIDE_ncurses_=: (NCURSES_WIDE_ncurses_"_)^:(0=4!:0<'NCURSES_WIDE_ncurses_') (1)
+NCURSES_UTF8_ncurses_=: (NCURSES_UTF8_ncurses_"_)^:(0=4!:0<'NCURSES_UTF8_ncurses_') (IFUNIX)
 
 3 : 0''
 select. UNAME
 case. 'Linux' do.
-  libncurses=: NCURSES_WIDE{'libncurses.so.5';'libncursesw.so.5'
-  libpanel=: NCURSES_WIDE{'libpanel.so.5';'libpanelw.so.5'
+  libncurses=: NCURSES_UTF8{'libncurses.so.5';'libncursesw.so.5'
+  libpanel=: NCURSES_UTF8{'libpanel.so.5';'libpanelw.so.5'
 case. 'Darwin' do.
-  libncurses=: NCURSES_WIDE{'libncurses.dylib';'libncursesw.dylib'
-  libpanel=: NCURSES_WIDE{'libpanel.dylib';'libpanelw.dylib'
+  libncurses=: NCURSES_UTF8{'libncurses.dylib';'libncursesw.dylib'
+  libpanel=: NCURSES_UTF8{'libpanel.dylib';'libpanelw.dylib'
 case. 'Win' do.
   libncurses=: <'pdcurses.dll'
   libpanel=: <'pdcurses.dll'
