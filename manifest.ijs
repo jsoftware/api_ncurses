@@ -18,3 +18,4 @@ FILES=: 0 : 0
 ncurses.ijs
 )
 
+PLATFORMS=: 'linux win darwin android'
