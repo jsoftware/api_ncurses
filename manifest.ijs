@@ -12,7 +12,9 @@ win32: download pre-compiled binary from http://pdcurses.sourceforge.net/
 
 VERSION=: '1.0.8'
 
-RELEASE=: 'j802 j803 j804 j805 j806 j807'
+RELEASE=: ''
+
+FOLDER=: 'api/ncurses'
 
 FILES=: 0 : 0
 ncurses.ijs
