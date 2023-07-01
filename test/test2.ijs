@@ -5,6 +5,9 @@ test=: 3 : 0
 if. UNAME-:'Linux' do.
   'libc.so.6 setlocale > x i *c'&cd 6;''
   'libc.so.6 setlocale > x i *c'&cd 1;,'C'
+elseif. (<UNAME)e.'FreeBSD';'OpenBSD' do.
+  'libc.so.6 setlocale > x i *c'&cd 0;''
+  'libc.so.6 setlocale > x i *c'&cd 4;,'C'
 elseif. UNAME-:'Darwin' do.
   'libc.dylib setlocale > x i *c'&cd 0;''
   'libc.dylib setlocale > x i *c'&cd 4;,'C'

@@ -7,7 +7,7 @@ NCURSES_UTF8_ncurses_=: (NCURSES_UTF8_ncurses_"_)^:(0=4!:0<'NCURSES_UTF8_ncurses
 
 3 : 0''
 select. UNAME
-case. 'Linux' do.
+case. 'Linux';'FreeBSD';'OpenBSD' do.
   libncurses=: NCURSES_UTF8{'libncurses.so.5';'libncursesw.so.5'
   libpanel=: NCURSES_UTF8{'libpanel.so.5';'libpanelw.so.5'
 case. 'Darwin' do.
